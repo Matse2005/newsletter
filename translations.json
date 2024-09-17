@@ -1,0 +1,20 @@
+{
+    "email": {
+        "footer": {
+            "company": "Your Company Heuvelstraat 106/2 3390 Tielt-Winge Belgium",
+            "in_browser": "Open this newsletter in the browser",
+            "click_here": "click here",
+            "send_to": "This email has been send to",
+            "privacy_statement": "Privacy Statement",
+            "tos": "Terms & Conditions",
+            "unsubscibe": "Unsubscibe",
+            "urls": {
+                "privacy_statement": "https://www.dezittere-philac.be/content/2-privacy-statement",
+                "tos": "https://www.dezittere-philac.be/content/3-algemene-voorwaarden"
+            }
+        }
+    },
+    "pages": {
+        "unsubscribe": {}
+    }
+}
