@@ -42,6 +42,8 @@ class EditGroup extends EditRecord
                         $emails = Excel::toCollection(null, storage_path('app/public/' . $filePath))->flatten()->toArray();
                     }
 
+                    File::delete(storage_path('app/public/' . $filePath));
+
                     // Overwrite the current emails (e.g., update in the database)
                     // Assuming there's a 'emails' column in your Group model:
                     $this->record->emails = implode(PHP_EOL, array_filter($emails)); // Join emails with newline
