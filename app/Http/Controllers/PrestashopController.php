@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Settings\PrestashopSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PrestashopController extends Controller
 {
@@ -61,20 +62,15 @@ class PrestashopController extends Controller
 
     public static function customerIDByEmail(string $email)
     {
-        try {
-            $customers = PrestashopController::customers();
+        $customers = PrestashopController::customers();
 
-            foreach ($customers as $customer) {
-                if ($customer->email == $email) {
-                    return $customer->id;
-                }
+        foreach ($customers as $customer) {
+            if ($customer->email == $email) {
+                return $customer->id;
             }
-
-            abort(404);
-        } catch (\Exception $e) {
-            Log::error('Error fetching customer ID by email: ' . $e->getMessage());
-            return [];
         }
+
+        return abort(404);
     }
 
     public static function customerByID(int $id)

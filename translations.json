@@ -15,6 +15,14 @@
         }
     },
     "pages": {
-        "unsubscribe": {}
+        "unsubscribe": {
+            "title": "Dezittere Philac",
+            "unsubscribe": "Unsubscribe",
+            "description": "You have successfully unsubscribed from our newsletter. If you'd like to receive our updates again, you can re-subscribe at any time.",
+            "subscribe_again": "Subscribe Again",
+            "url": {
+                "subscribe_again": "https://www.dezittere-philac.be/#footer"
+            }
+        }
     }
 }
