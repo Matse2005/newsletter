@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean("can_unsubscribe")->default(false);
             $table->boolean("editable")->default(true);
             $table->boolean("manual")->default(true);
-            $table->json("emails")->default('[]');
+            $table->json("emails")->default('[]')->nullable();
             $table->timestamps();
         });
     }
