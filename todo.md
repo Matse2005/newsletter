@@ -3,9 +3,9 @@
 -   Better language support for email -> v1.0.0 (Done)
 -   More customizable settings -> v1.0.0 and v1.0.1 (v1.0.0 Done)
 -   Changeable translations -> v1.0.1 (Done Early in v1.0.0)
--   Better language support for unsubscribe page -> v1.0.1
--   Bulk importing and removing emails -> v1.0.1
--   Unsubscribe page themes -> v1.0.2
--   Change primary color -> v1.0.2
--   Edit mail settings via dashboard -> v1.0.3
+-   Better language support for unsubscribe page -> v1.0.1 (Done)
+-   Bulk importing and removing emails -> v1.0.2
+-   Unsubscribe page themes -> v1.0.3
+-   Change primary color -> v1.0.3
+-   Edit mail settings via dashboard -> v1.0.4
 -   Customizable e-mail template -> Unknown version
