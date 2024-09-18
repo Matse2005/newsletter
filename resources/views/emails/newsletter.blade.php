@@ -1,3 +1,7 @@
+@php
+    $color = app(App\Settings\EmailSetting::class)->primary;
+@endphp
+
 <!DOCTYPE html>
 <html>
 
@@ -6,11 +10,11 @@
 
     <style>
         a {
-            color: rgb(255, 0, 0) !important;
+            color: rgb(from {{ $color }} r g b) !important;
         }
 
         a:hover {
-            color: rgb(255, 0, 0, 0.7);
+            color: rgb(from {{ $color }} r g b / 70%);
         }
 
         .button {
@@ -33,12 +37,12 @@
 
         .button-primary {
             color: white !important;
-            background-color: rgb(255, 0, 0);
+            background-color: rgb(from {{ $color }} r g b);
         }
 
         .button-primary:hover {
             color: white !important;
-            background-color: rgb(255, 0, 0, 0.7);
+            background-color: rgba(from {{ $color }} r g b / 70%);
         }
 
         hr {

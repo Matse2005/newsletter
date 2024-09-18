@@ -23,6 +23,7 @@ class ManageEmail extends SettingsPage
             ->schema([
                 Forms\Components\FileUpload::make('logo')
                     ->columnSpanFull(),
+                Forms\Components\ColorPicker::make('primary')
             ]);
     }
 }
