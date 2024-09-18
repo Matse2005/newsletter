@@ -97,7 +97,7 @@ return [
     'preserve_file_names' => false,
     'max_file_size' => 4042,
     'min_file_size' => 0,
-    'image_resize_mode' => 'force',
+    'image_resize_mode' => 'contain',
     'image_crop_aspect_ratio' => null,
     'image_resize_target_width' => 540,
     'image_resize_target_height' => null,

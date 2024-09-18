@@ -34,10 +34,12 @@ class SubscriptionController extends Controller
      */
     public function destroy(Request $request)
     {
-        // $id = PrestashopController::customerIDByEmail($request->email);
-        // $customer = PrestashopController::customerByIDInXML($id);
+        $id = PrestashopController::customerIDByEmail($request->email);
+        if ($id !== 0) {
+            $customer = PrestashopController::customerByIDInXML($id);
 
-        // PrestashopController::unsubscribe($id, $customer);
+            PrestashopController::unsubscribe($id, $customer);
+        }
 
         if ($request->lang) {
             $language = Language::where('key', $request->lang)->first();

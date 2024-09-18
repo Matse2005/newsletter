@@ -5,7 +5,9 @@
 -   Changeable translations -> v1.0.1 (Done Early in v1.0.0)
 -   Better language support for unsubscribe page -> v1.0.1 (Done)
 -   Bulk importing and removing emails -> v1.0.2 (Done)
--   Unsubscribe page themes -> v1.0.3
--   Change primary color -> v1.0.3
--   Edit mail settings via dashboard -> v1.0.4
+-   Add a way to upload files but also the ability to search for a file -> v1.0.3 (Done)
+-   Add a button to the table of the files and redirect to create page -> v1.0.4
+-   Unsubscribe page themes -> v1.0.5
+-   Change primary color -> v1.0.5
+-   Edit mail settings via dashboard -> v1.0.6
 -   Customizable e-mail template -> Unknown version

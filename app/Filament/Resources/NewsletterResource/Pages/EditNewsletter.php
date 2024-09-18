@@ -19,27 +19,35 @@ class EditNewsletter extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Action::make('sendEmail') // Custom action
-                ->label('Verstuur')
-                ->icon('heroicon-o-paper-airplane')
-                ->requiresConfirmation() // Show a confirmation modal
-                ->modalHeading('Verstuur Nieuwsbrief')
-                ->modalDescription('Ben je klaar om deze nieuwsbrief te versturen?')
-                ->modalSubmitActionLabel('Ja, versturen!') // Positive modal button
-                ->modalIcon('heroicon-o-paper-airplane')
-                ->action(function ($record) {
-                    $amount = NewsletterController::send($record);
-                    Notification::make()
-                        ->title('Nieuwsbrief is verstuurd en zal geleidelijk aan bij de contacten terecht komen.')
-                        ->success()
-                        ->send();
-                    $duration = ($amount - 1) * 30;
-                    Notification::make()
-                        ->title('Het zal ' . CarbonInterval::seconds($duration)->cascade()->forHumans() . ' duren tot dat alle nieuwsbrieven verzonden zijn.')
-                        ->success()
-                        ->seconds(30)
-                        ->send();
-                }),
+            // Action::make('sendEmail') // Custom action
+            //     ->label('Verstuur')
+            //     ->icon('heroicon-o-paper-airplane')
+            //     ->requiresConfirmation() // Show a confirmation modal
+            //     ->modalHeading('Verstuur Nieuwsbrief')
+            //     ->modalDescription('Ben je klaar om deze nieuwsbrief te versturen?')
+            //     ->modalSubmitActionLabel('Ja, versturen!') // Positive modal button
+            //     ->modalIcon('heroicon-o-paper-airplane')
+            //     ->action(function ($record) {
+            //         $amount = NewsletterController::send($record);
+            //         Notification::make()
+            //             ->title('Nieuwsbrief is verstuurd en zal geleidelijk aan bij de contacten terecht komen.')
+            //             ->success()
+            //             ->send();
+            //         $duration = ($amount - 1) * 30;
+            //         Notification::make()
+            //             ->title('Het zal ' . CarbonInterval::seconds($duration)->cascade()->forHumans() . ' duren tot dat alle nieuwsbrieven verzonden zijn.')
+            //             ->success()
+            //             ->seconds(30)
+            //             ->send();
+            //     }),
+            Action::make('bestanden')
+                // ->action(fn (Contract $record) => $record->advance())
+                ->icon('heroicon-o-document-text')
+                ->modalContent(fn() => view(
+                    'files',
+                ))
+                ->modalSubmitAction(false)
+                ->slideOver(),
             Action::make('duplicate')
                 ->label('Dupliceren')
                 ->icon('heroicon-o-document-duplicate')

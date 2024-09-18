@@ -70,7 +70,7 @@ class PrestashopController extends Controller
             }
         }
 
-        return abort(404);
+        return 0;
     }
 
     public static function customerByID(int $id)
