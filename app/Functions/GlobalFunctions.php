@@ -15,3 +15,8 @@ function settings()
 {
   return app(EmailSetting::class);
 }
+
+function general_settings()
+{
+  return \Illuminate\Support\Facades\DB::table('general_settings')->first();
+}

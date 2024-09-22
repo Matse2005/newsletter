@@ -14,7 +14,7 @@
         }
 
         a:hover {
-            color: rgb(from {{ $color }} r g b / 70%);
+            color: rgba(from {{ $color }} r g b / 70%);
         }
 
         .button {
