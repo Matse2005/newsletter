@@ -31,7 +31,7 @@ class NewsletterController extends Controller
         if ($group)
             if ($group->manual == 0)
                 return NewsletterController::contacts();
-            else
+            else if ($group->emails !== null)
                 return preg_split('/\n/', $group->emails);
 
         return [];
@@ -39,11 +39,11 @@ class NewsletterController extends Controller
 
     public static function contacts()
     {
-        return [
-            "matse@vanhorebeek.be",
-            "matse.vanhorebeek@gmail.com"
-        ];
+        // return [
+        //     "matse@vanhorebeek.be",
+        //     "matse.vanhorebeek@gmail.com"
+        // ];
 
-        // return PrestashopController::contacts();
+        return PrestashopController::contacts();
     }
 }

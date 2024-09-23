@@ -55,8 +55,8 @@
 
 <body style="" class="">
     <div style="max-width: 40rem; margin-left: auto; margin-right: auto; padding: 1.5rem; width: 100%;">
-        <img src="{{ config('app.url') }}/storage/{{ app(App\Settings\EmailSetting::class)->logo }}"
-            alt="Dezittere Philac | Logo" style="width: 17rem; display: block; margin-left: auto; margin-right: auto;">
+        <img src="{{ config('app.url') }}/storage/{{ app(App\Settings\EmailSetting::class)->logo }}" alt="Logo"
+            style="width: 17rem; display: block; margin-left: auto; margin-right: auto;">
         <div class="tiptap-wrapper" style="background-color: white; border-radius: 1rem; padding: 1.2rem 2rem">
             <div class="tiptap-prosemirror-wrapper">
                 {!! format_email($newsletter->email) !!}

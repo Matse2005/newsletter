@@ -7,6 +7,6 @@ return new class extends SettingsMigration
     public function up(): void
     {
         $this->migrator->add('email.logo', '');
-        $this->migrator->add('email.primary', '');
+        $this->migrator->add('email.primary', '#ff0000');
     }
 };

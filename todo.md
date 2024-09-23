@@ -8,6 +8,7 @@
 -   Add a way to upload files but also the ability to search for a file -> v1.0.3 (Done)
 -   Add a button to the table of the files and redirect to create page -> v1.0.4 (Done)
 -   Change primary color -> v1.0.5 (Done)
--   Unsubscribe page themes -> v1.0.6
+-   Add campain to links -> v1.0.6
+-   Unsubscribe page themes -> v1.0.7
 -   Edit mail settings via dashboard -> Unknown version
 -   Customizable e-mail template -> Unknown version

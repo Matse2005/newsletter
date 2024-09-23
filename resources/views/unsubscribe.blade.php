@@ -39,8 +39,8 @@
 </head>
 
 <body class="py-12 space-y-6 font-sans antialiased text-center text-gray-800 bg-gray-100">
-    <img src="{{ config('app.url') }}/storage/{{ app(App\Settings\EmailSetting::class)->logo }}"
-        alt="Dezittere Philac | Logo" class="w-64 mx-auto">
+    <img src="{{ config('app.url') }}/storage/{{ app(App\Settings\EmailSetting::class)->logo }}" alt="Logo"
+        class="w-64 mx-auto">
     <main class="flex flex-col items-center max-w-lg p-10 mx-auto bg-white shadow-lg rounded-3xl">
         <h1 class="text-xl font-bold">{{ json_decode($language->translations)->pages->unsubscribe->title }}!</h1>
         <p class="mb-4 leading-relaxed text-center text-gray-700">

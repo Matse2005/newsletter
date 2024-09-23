@@ -33,7 +33,7 @@ class GroupResource extends Resource
                 Forms\Components\TextInput::make('group')
                     ->required(),
                 Forms\Components\TextInput::make('description'),
-                Forms\Components\TextArea::make('emails')
+                Forms\Components\Textarea::make('emails')
                     ->hint('Plaats alle e-mails onder elkaar')
                     ->autosize()
                     ->columnSpanFull(),
