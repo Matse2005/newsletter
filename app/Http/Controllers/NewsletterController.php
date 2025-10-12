@@ -13,11 +13,12 @@ class NewsletterController extends Controller
     public static function send(Newsletter $newsletter)
     {
         $contacts = NewsletterController::groups($newsletter->group);
+        Log::debug($contacts);
 
-        foreach ($contacts as $index => $contact) {
-            // Dispatch a job to send the newsletter with a delay
-            SendNewsletter::dispatch($contact, $newsletter)->delay(now()->addSeconds($index * 30));
-        }
+        // foreach ($contacts as $index => $contact) {
+        //     // Dispatch a job to send the newsletter with a delay
+        //     SendNewsletter::dispatch($contact, $newsletter)->delay(now()->addSeconds($index * 120));
+        // }
 
         // Optionally update the send_at timestamp or log the sending
         $newsletter->update(['send_at' => now()]);
@@ -29,9 +30,10 @@ class NewsletterController extends Controller
     {
         Log::debug($group);
         if ($group)
-            if ($group->manual == 0)
+            if ($group->manual == 0) {
+                Log::debug('Right');
                 return NewsletterController::contacts();
-            else if ($group->emails !== null)
+            } else if ($group->emails !== null)
                 return preg_split('/\n/', $group->emails);
 
         return [];

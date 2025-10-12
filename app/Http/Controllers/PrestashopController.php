@@ -31,10 +31,11 @@ class PrestashopController extends Controller
                 throw new \Exception('cURL error: ' . curl_error($curl));
             }
 
-            $response = json_decode($response);
+            Log::debug($response);
+            $json = json_decode($response);
             curl_close($curl);
 
-            return $response->customers ?? [];
+            return $json->customers ?? [];
         } catch (\Exception $e) {
             Log::error('Error fetching customers: ' . $e->getMessage());
             return [];
@@ -45,6 +46,7 @@ class PrestashopController extends Controller
     {
         try {
             $customers = PrestashopController::customers();
+            Log::debug($customers);
             $emails = [];
 
             foreach ($customers as $customer) {

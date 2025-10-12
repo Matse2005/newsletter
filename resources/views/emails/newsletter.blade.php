@@ -79,7 +79,7 @@
                 <div style="margin-bottom: -8px;"> <!-- Adjust the top margin -->
                     <p style="color: #3b3b3b; font-size: 12px;">
                         {{ json_decode($newsletter->language->translations)->email->footer->in_browser }}, <a
-                            href="{{ config('app.url') }}/newsletter/{{ $newsletter->id }}">{{ json_decode($newsletter->language->translations)->email->footer->click_here }}</a>
+                            href="{{ config('app.url') }}/view/newsletter/{{ $newsletter->id }}">{{ json_decode($newsletter->language->translations)->email->footer->click_here }}</a>
                     </p>
                 </div>
             @endisset

@@ -131,7 +131,7 @@ class NewsletterResource extends Resource
                             ->title('Nieuwsbrief is verstuurd en zal geleidelijk aan bij de contacten terecht komen.')
                             ->success()
                             ->send();
-                        $duration = ($amount - 1) * 30;
+                        $duration = ($amount - 1) * 120;
                         Notification::make()
                             ->title('Het zal ' . CarbonInterval::seconds($duration)->cascade()->forHumans() . ' duren tot dat alle nieuwsbrieven verzonden zijn.')
                             ->success()
