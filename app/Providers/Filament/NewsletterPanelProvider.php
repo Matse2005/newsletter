@@ -59,7 +59,7 @@ class NewsletterPanelProvider extends PanelProvider
             ->plugins([
                 \TomatoPHP\FilamentUsers\FilamentUsersPlugin::make(),
             ])
-            ->darkMode(false)
-            ->viteTheme('resources/css/filament/newsletter/theme.css');
+            ->darkMode(false);
+        // ->viteTheme('resources/css/filament/newsletter/theme.css');
     }
 }
